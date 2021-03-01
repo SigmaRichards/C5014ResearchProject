@@ -1,0 +1,5 @@
+Ant colony optimisation
+Tabu search
+genetic algorithm
+artificial bee
+simulated annealing
