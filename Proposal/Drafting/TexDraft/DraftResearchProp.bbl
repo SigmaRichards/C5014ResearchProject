@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{chen2013efficient}
+{\sc Chen, B., Chen, L., and Chen, Y.}
+\newblock Efficient ant colony optimization for image feature selection.
+\newblock {\em Signal processing 93}, 6 (2013), 1566--1576.
+
+\bibitem{pereira2015exudate}
+{\sc Pereira, C., Gon{\c{c}}alves, L., and Ferreira, M.}
+\newblock Exudate segmentation in fundus images using an ant colony
+  optimization approach.
+\newblock {\em Information Sciences 296\/} (2015), 14--24.
+
+\bibitem{wang2017feature}
+{\sc Wang, S., Ding, Z., and Fu, Y.}
+\newblock Feature selection guided auto-encoder.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence\/} (2017), vol.~31.
+
+\end{thebibliography}

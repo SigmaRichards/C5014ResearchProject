@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper]{article}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\topmargin}{-1.6cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\rightmargin}{0.5cm}
+\setlength{\textheight}{24.00cm} 
+\setlength{\textwidth}{15.00cm}
+\parindent 0pt
+\parskip 5pt
+\pagestyle{plain}
+
+\title{Research Proposal Draft}
+\author{Daniel Hess}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{tabbing}
+\bf Supervisor: \=\kill
+\bf Title:   \> Feature Selection and Segmentation on 3D pit face data \\
+\bf Author:  \> Daniel Hess - 21971897 \\
+\bf Supervisor:   \> Professor Eun-Jung Holden \\
+\bf Degree:   \> MDS (12 point project)
+\end{tabbing}
+
+\section*{Background}
+
+Texture segmentation of images is an important area of data analysis with applications in navigation, surveying, classification, computer vision and the general decision making processes. 
+
+With plenty of advancements in segmentation being made, and the constant push for more and more data, the techniques analysts use to perform their image analysis become more and more feature dense. There is also an evolution in the types of data we can classify as photogrammetry allows the extraction of more than just colour information to be provided to the user. With some images providing depth and height information we can effectively map out 3D regions and provide a surface plot for some regions.
+
+This constant push for information to the user comes at a cost however, the more and more potential features we consider, the longer it takes to build these models and applications and the more resources we need to spend in order to better manage these factors.
+
+While feature extraction and the push for big data continues, there are, however, advances being made to solve the problems we face with huge feature pools. Chen \cite{chen2013efficient} proposes a technique involving ant colony optimization as a method of feature selection, whereas Pereira \cite{pereira2015exudate} uses ACO as a method of segmentation in itself. 
+
+Apart from ACO, Auto-Encoders have been shown to have great success given the right constraints \cite{wang2017feature}. Auto-encoders have the advantage that they can be given a set of images and can generate compressed or lower dimensional constructions of the input data, which of course can be implemented into traditional segmentation/clustering algorithms as required.
+
+
+\section*{Aim}
+%Explore the effectiveness of segmentation techniques
+In this project, I will be exploring the effectiveness of segmentation techniques on a confidential data set provided by Rio Tinto. The data provides photogrammetry data of pit faces, and essentially provides a 3D point cloud, for which common segmentation techniques are limited. The techniques explored will be dependant on the ability to implement ways of exploring the 3D aspect of the data, with a focus on feature selection techniques.
+%Use of 3D surface plot data
+%Feature selection and methods
+\section*{Method}
+\section*{Software and Hardware Requirements}
+\section*{References}
+\bibliographystyle{acm}
+\bibliography{refs}
+\end{document}
