@@ -11,17 +11,18 @@
 \pagestyle{plain}
 
 \title{Research Proposal Draft}
-\author{Daniel Hess}
 \date{}
+\newcommand{\comment}[1]{}
+
 
 \begin{document}
 \maketitle
 
 \begin{tabbing}
 \bf Supervisor: \=\kill
-\bf Title:   \> Feature Selection and Segmentation on 3D pit face data \\
+\bf Title:   \> Mapping of Photogrammetry Mine Pit Data using 3D texture \\
 \bf Author:  \> Daniel Hess - 21971897 \\
-\bf Supervisor:   \> Professor Eun-Jung Holden \\
+\bf Supervisor:   \> Professor Eun-Jung Holden, Dr. Daniel Wedge \\
 \bf Degree:   \> MDS (12 point project)
 \end{tabbing}
 
@@ -29,23 +30,87 @@
 
 Texture segmentation of images is an important area of data analysis with applications in navigation, surveying, classification, computer vision and the general decision making processes. 
 
-With plenty of advancements in segmentation being made, and the constant push for more and more data, the techniques analysts use to perform their image analysis become more and more feature dense. There is also an evolution in the types of data we can classify as photogrammetry allows the extraction of more than just colour information to be provided to the user. With some images providing depth and height information we can effectively map out 3D regions and provide a surface plot for some regions.
+In images, texture is a characterisation of certain regions that contain similar intensity, colour or shapes and their patterns. If we consider grey-scale images, texture may have more to do with a change in intensity pattern and shapes present. Texture classification alone can be useful in image processing for separating objects that may be overlapping, or even classifying how different object share certain characteristics.
 
-This constant push for information to the user comes at a cost however, the more and more potential features we consider, the longer it takes to build these models and applications and the more resources we need to spend in order to better manage these factors.
+\textit{\textbf{What is the problem? Geological stuff}}
 
-While feature extraction and the push for big data continues, there are, however, advances being made to solve the problems we face with huge feature pools. Chen \cite{chen2013efficient} proposes a technique involving ant colony optimization as a method of feature selection, whereas Pereira \cite{pereira2015exudate} uses ACO as a method of segmentation in itself. 
+The data supplied for this study considers a 3D point cloud and colour images of the same regions, both of which will be used in this study. Providing depth and height information for the images, we can effectively map out 3D regions and provide a surface plot for these regions - see \textit{Aims}.
 
-Apart from ACO, Auto-Encoders have been shown to have great success given the right constraints \cite{wang2017feature}. Auto-encoders have the advantage that they can be given a set of images and can generate compressed or lower dimensional constructions of the input data, which of course can be implemented into traditional segmentation/clustering algorithms as required.
+There are a number of appraoches previously used for similar data. Co-occurence relations use reoccuring intensity pairs to build matrix which can then be used to calculate certain features such as entropy, shade, inertia and many others \cite{longstaff1995improving}. Traditionally, co-occurence matrices are used on grey-scale images, however some have been developed to specifically consider colour images \cite{palm2004color}.
+
+Another approach considers Gabor filters and log-Gabor filters. It has been shown that Gabor filters are good at characterising textures and edges \cite{idrissa2002texture}, and have also been used in some applications used for characterising 3D textures \cite{xu2009automatic}. Some research has also been done into the preference for log-Gabor filters as opposed to Gabor filters \cite{nava2011comparison}.
+
+Convolutional neural networks are a popular area at the moment, with promising texture classification \cite{cimpoi2015deep}. It also provides a good framework for implementing into 3D applications as the filters it generates can be of arbitrary dimension.
+
+Segmentation is an evolving area, which generally relies on some combination of feature extraction and selection, then clustering or classification techniques. Some people tend to stick with these kernel banks \cite{sardar2020efficient} as well as edge detection \cite{sujatha2015performance}. There are also number of these that benefit from the use of optimization techniques either as selection criteria \cite{chen2013efficient} or as seeding points for other algorithms \cite{saug2015color}.
+
+Chen \textit{et al} \cite{chen2013efficient} proposes a technique involving ant colony optimization as a method of feature selection, whereas Pereira \cite{pereira2015exudate} uses ACO as a method of segmentation in itself. This highlights the adaptability of many techniques we use and how we can often use many techniques for different tasks.
+
+Auto-Encoders have been shown to have great success given the right constraints \cite{wang2017feature}. Auto-encoders have the advantage that they can be given a set of images and can generate compressed or lower dimensional constructions of the input data, which of course can be implemented into traditional segmentation/clustering algorithms as required. These can be used as a way of feature selection but also can be used as a training step in the building of CNNs.
+
+Often many of these techniques can be paired with clustering techniques as the method of segmentation. Generally these include, k-means, fuzzy c-means, expectation and maximization, and DBSCAN \cite{dhanachandra2017survey}.
 
 
-\section*{Aim}
-%Explore the effectiveness of segmentation techniques
-In this project, I will be exploring the effectiveness of segmentation techniques on a confidential data set provided by Rio Tinto. The data provides photogrammetry data of pit faces, and essentially provides a 3D point cloud, for which common segmentation techniques are limited. The techniques explored will be dependant on the ability to implement ways of exploring the 3D aspect of the data, with a focus on feature selection techniques.
-%Use of 3D surface plot data
-%Feature selection and methods
+\section*{Aims}
+In this project, I will be exploring the effectiveness of segmentation techniques on a confidential data set provided by Rio Tinto. The main goal is to be able to quickly and effectively  identify and segment detrital from bedded geological units. This is a task currently performed by geologists, and while effective at their job, can introduce levels of subjectivity as they primarily rely of subtle visual cues. By successfully implementing these techniques, we can free up the time of geologists performing this long and tedious task, as well as decrease the time it can take to process large amounts of data.
+
+The data provides photogrammetry data of pit faces from an anonymous Rio Tinto mine pit. The aerial photography is a set of colour images, while a 3D point cloud provides a location in 3D space to which each point sits. Together they form a cohesive mesh of a 3D surface. Common segmentation techniques are limited for this type of data. The techniques explored will be dependant on the ability to implement ways of exploring the 3D aspect of the data, with a focus on feature selection techniques.
+
+There are 3 stages to this study:
+\begin{enumerate}
+\item 3D Data Encoding\\
+	- Flattened Image: this is the baseline case, to compare whether techniques that include 3D information have any improvement.\\
+	- Intensity Level: As Xu \textit{et al} \cite{xu2009automatic} includes 3D information as a separate intensity level, we should be able to do the same
+\item Feature Selection\\
+	- Auto-encoder: Using a CNN to perform dimensionality reduction and do feature selection in a single step, may allow for some form of deep understanding from the images.\\
+	-Log-Gabor filters: Similar to how Xu \textit{et al} \cite{xu2009automatic} used Gabor Filters, however using log-Gabor. This technique can be paired with other forms of feature selection.\\
+	-ACO: Ant Colony Optimisation has been shown to be great at optimisation tasks. This implementation will be similar to how Chen \textit{et al} \cite{chen2013efficient} implemented the algorithm.
+\item Segmentation\\
+	- K-means: One of the simplest and widest used clustering techniques.\\
+	- DBSCAN: A clustering algorithm with good real-time performance \cite{shen2016real}.
+\end{enumerate}
+
 \section*{Method}
+
+Specifically, I plan on using ACO and auto-encoders as potential methods of feature selection and use these in conjunction with both clustering techniques (kmeans, dbscan) and ACO for segmenation. 
+
+There is going to be a specific push for implementation of the 3D point cloud of data, with exploration into systems that take this as another piece of data, or ways of implementing this data into formats each system can manage. Obviously the most simple way of dealing with this is to just flatten the image and perform our analysis on that. While this is not what I'm hoping to end with, this will be a good baseline metric to compare these methods to. 
+
+The next closest possiblility to consider a distortion of the original image that corresponds to surface plot. While this is just another method of flattening the image we can consider the terrain as mapping the contours of this new image. This would require additional computation in reversing this process. 
+
+Another method is to consider the height map as another dimension in the colour information; ultimately the colour information is used as a matrix of numbers by the computer so by accessing the information this way we can use kernel's the same way. This also allows for us to include information like the gradient at specific locations.
+
+Essentially, there are 3 parts to this analysis. Firstly we are comparing methods of 3D encoding: this is data specific as the provided data set includes this information. Next we are comparing method's of feature selection. And finally we are comparing segmentation techniques: while this is ultimately the desire for this analysis, my purpose is to compare the range of factor's that lead to a certain performance.
+\pagebreak
+
+\section*{Timeline}
+
+\begin{table}[h!]
+\begin{tabular}{||c|c||}
+\hline
+Late March & Define Metrics \\
+29th March & Defend Proposal \\
+Mid April & Label Provided Data \\
+Late April & Source Publicly Available Data \\
+Early May & Implement Suggested Techniques \\
+Mid May & Standardize workflow between techniques \\
+17th May & Revised Proposal Due \\
+17th May & Literature Review Due \\
+Late May & Define Experimental Procedure \\
+Late July & Build Models \\
+Mid August & Evaluate Results \\
+20th September & Draft Dissertation Due \\
+20th September & Seminar Abstract Due \\
+4th October & Seminar \\
+18th October & Dissertation Due \\
+\hline
+\end{tabular}
+\end{table}
+
+
 \section*{Software and Hardware Requirements}
-\section*{References}
+Python will be primarily used for this analysis. Software packages such as scikit-learn \cite{scikit-learn} as well as  scikit-image \cite{van2014scikit}, and Tensorflow \cite{tensorflow2015-whitepaper}. While no particular hardware is required, the project may benefit greatly from access to GPUs.
+
 \bibliographystyle{acm}
 \bibliography{refs}
 \end{document}

@@ -1,9 +1,64 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{tensorflow2015-whitepaper}
+{\sc Abadi, M., Agarwal, A., Barham, P., Brevdo, E., Chen, Z., Citro, C.,
+  Corrado, G.~S., Davis, A., Dean, J., Devin, M., Ghemawat, S., Goodfellow, I.,
+  Harp, A., Irving, G., Isard, M., Jia, Y., Jozefowicz, R., Kaiser, L., Kudlur,
+  M., Levenberg, J., Man\'{e}, D., Monga, R., Moore, S., Murray, D., Olah, C.,
+  Schuster, M., Shlens, J., Steiner, B., Sutskever, I., Talwar, K., Tucker, P.,
+  Vanhoucke, V., Vasudevan, V., Vi\'{e}gas, F., Vinyals, O., Warden, P.,
+  Wattenberg, M., Wicke, M., Yu, Y., and Zheng, X.}
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock Software available from tensorflow.org.
 
 \bibitem{chen2013efficient}
 {\sc Chen, B., Chen, L., and Chen, Y.}
 \newblock Efficient ant colony optimization for image feature selection.
 \newblock {\em Signal processing 93}, 6 (2013), 1566--1576.
+
+\bibitem{cimpoi2015deep}
+{\sc Cimpoi, M., Maji, S., and Vedaldi, A.}
+\newblock Deep filter banks for texture recognition and segmentation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition\/} (2015), pp.~3828--3836.
+
+\bibitem{dhanachandra2017survey}
+{\sc Dhanachandra, N., and Chanu, Y.~J.}
+\newblock A survey on image segmentation methods using clustering techniques.
+\newblock {\em European Journal of Engineering and Technology Research 2}, 1
+  (2017), 15--20.
+
+\bibitem{idrissa2002texture}
+{\sc Idrissa, M., and Acheroy, M.}
+\newblock Texture classification using gabor filters.
+\newblock {\em Pattern Recognition Letters 23}, 9 (2002), 1095--1102.
+
+\bibitem{longstaff1995improving}
+{\sc Longstaff, D., Walker, R., Walker, R.~F., and Jackway, P.}
+\newblock Improving co-occurrence matrix feature discrimination.
+\newblock In {\em Proc. of DICTA’95, 3 rd International Conference on Digital
+  Image Computing: Techniques and Applications\/} (1995), Citeseer.
+
+\bibitem{nava2011comparison}
+{\sc Nava, R., Escalante-Ram{\'\i}rez, B., and Crist{\'o}bal, G.}
+\newblock A comparison study of gabor and log-gabor wavelets for texture
+  segmentation.
+\newblock In {\em 2011 7th International Symposium on Image and Signal
+  Processing and Analysis (ISPA)\/} (2011), IEEE, pp.~189--194.
+
+\bibitem{palm2004color}
+{\sc Palm, C.}
+\newblock Color texture classification by integrative co-occurrence matrices.
+\newblock {\em Pattern recognition 37}, 5 (2004), 965--976.
+
+\bibitem{scikit-learn}
+{\sc Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B.,
+  Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V.,
+  Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and
+  Duchesnay, E.}
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research 12\/} (2011), 2825--2830.
 
 \bibitem{pereira2015exudate}
 {\sc Pereira, C., Gon{\c{c}}alves, L., and Ferreira, M.}
@@ -11,10 +66,46 @@
   optimization approach.
 \newblock {\em Information Sciences 296\/} (2015), 14--24.
 
+\bibitem{saug2015color}
+{\sc Sa{\u{g}}, T., and {\c{C}}unka{\c{s}}, M.}
+\newblock Color image segmentation based on multiobjective artificial bee
+  colony optimization.
+\newblock {\em Applied soft computing 34\/} (2015), 389--401.
+
+\bibitem{sardar2020efficient}
+{\sc Sardar, A., Mehrshad, N., and Razavi, S.~M.}
+\newblock Efficient image segmentation method based on an adaptive selection of
+  gabor filters.
+\newblock {\em IET Image Processing\/} (2020).
+
+\bibitem{shen2016real}
+{\sc Shen, J., Hao, X., Liang, Z., Liu, Y., Wang, W., and Shao, L.}
+\newblock Real-time superpixel segmentation by dbscan clustering algorithm.
+\newblock {\em IEEE transactions on image processing 25}, 12 (2016),
+  5933--5942.
+
+\bibitem{sujatha2015performance}
+{\sc Sujatha, P., and Sudha, K.}
+\newblock Performance analysis of different edge detection techniques for image
+  segmentation.
+\newblock {\em Indian Journal of Science and Technology 8}, 14 (2015), 1.
+
+\bibitem{van2014scikit}
+{\sc Van~der Walt, S., Sch{\"o}nberger, J.~L., Nunez-Iglesias, J., Boulogne,
+  F., Warner, J.~D., Yager, N., Gouillart, E., and Yu, T.}
+\newblock scikit-image: image processing in python.
+\newblock {\em PeerJ 2\/} (2014), e453.
+
 \bibitem{wang2017feature}
 {\sc Wang, S., Ding, Z., and Fu, Y.}
 \newblock Feature selection guided auto-encoder.
 \newblock In {\em Proceedings of the AAAI Conference on Artificial
   Intelligence\/} (2017), vol.~31.
+
+\bibitem{xu2009automatic}
+{\sc Xu, C., Li, S., Tan, T., and Quan, L.}
+\newblock Automatic 3d face recognition from depth and intensity gabor
+  features.
+\newblock {\em Pattern recognition 42}, 9 (2009), 1895--1905.
 
 \end{thebibliography}

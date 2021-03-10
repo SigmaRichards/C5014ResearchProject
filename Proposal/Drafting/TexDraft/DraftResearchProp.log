@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.2.28)  3 MAR 2021 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.2.28)  10 MAR 2021 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -36,35 +36,55 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 (./DraftResearchProp.aux)
 \openout1 = `DraftResearchProp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 18.
+(Font)              <14.4> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
- [1
+(Font)              <7> on input line 19.
 
-] (./DraftResearchProp.bbl) [2]
-(./DraftResearchProp.aux) ) 
+
+LaTeX Warning: No \author given.
+
+[1
+
+] [2] [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 89.
+ (./DraftResearchProp.bbl [4]
+Underfull \hbox (badness 2065) in paragraph at lines 56--62
+[]\OT1/cmr/m/sc/12 Pedregosa, F., Varo-quaux, G., Gram-fort, A., Michel, V.,
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 94--98
+[]\OT1/cmr/m/sc/12 Van der Walt, S., Sch[]onberger, J. L., Nunez-Iglesias, J.,
+ []
+
+[5]) [6] (./DraftResearchProp.aux) ) 
 Here is how much of TeX's memory you used:
- 390 strings out of 483141
- 6716 string characters out of 5965177
- 235749 words of memory out of 5000000
- 15488 multiletter control sequences out of 15000+600000
- 535409 words of font info for 34 fonts, out of 8000000 for 9000
+ 430 strings out of 483141
+ 7245 string characters out of 5965177
+ 238749 words of memory out of 5000000
+ 15521 multiletter control sequences out of 15000+600000
+ 538206 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 24i,6n,21p,529b,185s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,7n,21p,637b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on DraftResearchProp.dvi (2 pages, 4468 bytes).
+Output written on DraftResearchProp.dvi (6 pages, 18728 bytes).

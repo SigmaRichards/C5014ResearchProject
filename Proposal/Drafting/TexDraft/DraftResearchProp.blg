@@ -4,45 +4,45 @@ The top-level auxiliary file: DraftResearchProp.aux
 The style file: acm.bst
 Database file #1: refs.bib
 Warning--can't use both volume and number fields in wang2017feature
-You've used 3 entries,
+You've used 17 entries,
             2253 wiz_defined-function locations,
-            549 strings with 4419 characters,
-and the built_in function-call counts, 1041 in all, are:
-= -- 97
-> -- 51
+            637 strings with 8075 characters,
+and the built_in function-call counts, 7700 in all, are:
+= -- 692
+> -- 559
 < -- 0
-+ -- 21
-- -- 18
-* -- 92
-:= -- 175
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 18
++ -- 229
+- -- 210
+* -- 717
+:= -- 1296
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 156
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 33
-empty$ -- 84
-format.name$ -- 18
-if$ -- 207
+cite$ -- 18
+duplicate$ -- 197
+empty$ -- 482
+format.name$ -- 210
+if$ -- 1508
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 17
+int.to.str$ -- 17
+missing$ -- 16
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 152
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 139
 quote$ -- 0
-skip$ -- 17
+skip$ -- 121
 stack$ -- 0
-substring$ -- 65
-swap$ -- 7
+substring$ -- 417
+swap$ -- 53
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 68
 warning$ -- 1
-while$ -- 10
-width$ -- 4
-write$ -- 32
+while$ -- 60
+width$ -- 19
+write$ -- 172
 (There was 1 warning)
