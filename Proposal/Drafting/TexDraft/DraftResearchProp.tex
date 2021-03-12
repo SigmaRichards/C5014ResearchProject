@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 \setlength{\oddsidemargin}{0.5cm}
 \setlength{\evensidemargin}{0.5cm}
 \setlength{\topmargin}{-1.6cm}
@@ -10,7 +10,7 @@
 \parskip 5pt
 \pagestyle{plain}
 
-\title{Research Proposal Draft}
+\title{Research Proposal}
 \date{}
 \newcommand{\comment}[1]{}
 
@@ -28,11 +28,11 @@
 
 \section*{Background}
 
-Texture segmentation of images is an important area of data analysis with applications in navigation, surveying, classification, computer vision and the general decision making processes. 
+Texture segmentation of images is an important area of computer vision and data analysis, with applications in navigation, surveying, and classification.
 
 In images, texture is a characterisation of certain regions that contain similar intensity, colour or shapes and their patterns. If we consider grey-scale images, texture may have more to do with a change in intensity pattern and shapes present. Texture classification alone can be useful in image processing for separating objects that may be overlapping, or even classifying how different object share certain characteristics.
 
-\textit{\textbf{What is the problem? Geological stuff}}
+Typical mine site operation requires the collection of large amounts of data for geological, risk and safety purposes. Effective detection of detrital units to separate them from banded iron deposits is one of the clear goals for this project. While the iron strata within the Pilbara region is well documented, a number of geological processes result in different surface strata. Due to surface condition as well as weathering and erosion, the result is the formation of detrital units, which are noticeably distinct from banded iron. Proper modelling of these units allows decision makers to perform better analyses.
 
 The data supplied for this study considers a 3D point cloud and colour images of the same regions, both of which will be used in this study. Providing depth and height information for the images, we can effectively map out 3D regions and provide a surface plot for these regions - see \textit{Aims}.
 
@@ -46,7 +46,7 @@ Segmentation is an evolving area, which generally relies on some combination of 
 
 Chen \textit{et al} \cite{chen2013efficient} proposes a technique involving ant colony optimization as a method of feature selection, whereas Pereira \cite{pereira2015exudate} uses ACO as a method of segmentation in itself. This highlights the adaptability of many techniques we use and how we can often use many techniques for different tasks.
 
-Auto-Encoders have been shown to have great success given the right constraints \cite{wang2017feature}. Auto-encoders have the advantage that they can be given a set of images and can generate compressed or lower dimensional constructions of the input data, which of course can be implemented into traditional segmentation/clustering algorithms as required. These can be used as a way of feature selection but also can be used as a training step in the building of CNNs.
+Auto-encoders have been shown to have great success given the right constraints \cite{wang2017feature}. Auto-encoders have the advantage that they can be given a set of images and can generate compressed or lower dimensional constructions of the input data, which of course can be implemented into traditional segmentation/clustering algorithms as required. These can be used as a way of feature selection but also can be used as a training step in the building of CNNs.
 
 Often many of these techniques can be paired with clustering techniques as the method of segmentation. Generally these include, k-means, fuzzy c-means, expectation and maximization, and DBSCAN \cite{dhanachandra2017survey}.
 
@@ -67,20 +67,36 @@ There are 3 stages to this study:
 	-ACO: Ant Colony Optimisation has been shown to be great at optimisation tasks. This implementation will be similar to how Chen \textit{et al} \cite{chen2013efficient} implemented the algorithm.
 \item Segmentation\\
 	- K-means: One of the simplest and widest used clustering techniques.\\
-	- DBSCAN: A clustering algorithm with good real-time performance \cite{shen2016real}.
+	- DBSCAN: A clustering algorithm with good real-time performance \cite{shen2016real}.\\
+	- ACO: As the ant colony optimisation is supposed to a representation of a path walking algorithm, it makes sense to consider the paths as boundary lines. This will be implemented similarly to Pereira \textit{et al} \cite{pereira2015exudate}.
 \end{enumerate}
 
+The main focus of this analysis will work on incorporating the 3D data into the implementation, with the goal being a scheme/implementation of the best of the possible options given the data.
+
 \section*{Method}
+\begin{enumerate}
+\item Label data. As the techniques need to be evaluated and the data is not labelled, this is a necessary step, even if for a small subset.
+\item Source public data. As the data set is confidential, some public source evaluation of the techniques will be necessary for the purpose of clarity about techniques and performance.
+\item Standardise inter-technique workflow. As each technique will expect particular forms for input/output, the techniques will need to conform to some sort of standard so that they can be easily swapped in and out. This may be of the form of wrappers for functions/classes or helper functions.
+\item Implement the techniques.\\
+	- 3D data encoding\\
+	- Auto-encoder\\
+	- Gabor-log filters\\
+	- Ant colony optimisation (For feature selection and segmentation)\\
+	- K-means\\
+	- DBSCAN
+\item Define metrics and evaluation criteria. Depending on the data, some metrics may suit better than others, while other criteria like setup time or computation time might be important.
+\item Evaluate results. Compare all options and combinations and evaluate with respect to our metrics and necessary criteria.
+\end{enumerate}
+%Specifically, I plan on using ACO and auto-encoders as potential methods of feature selection and use these in conjunction with both clustering techniques (kmeans, dbscan) and ACO for segmenation. 
 
-Specifically, I plan on using ACO and auto-encoders as potential methods of feature selection and use these in conjunction with both clustering techniques (kmeans, dbscan) and ACO for segmenation. 
+%There is going to be a specific push for implementation of the 3D point cloud of data, with exploration into systems that take this as another piece of data, or ways of implementing this data into formats each system can manage. Obviously the most simple way of dealing with this is to just flatten the image and perform our analysis on that. While this is not what I'm hoping to end with, this will be a good baseline metric to compare these methods to. 
 
-There is going to be a specific push for implementation of the 3D point cloud of data, with exploration into systems that take this as another piece of data, or ways of implementing this data into formats each system can manage. Obviously the most simple way of dealing with this is to just flatten the image and perform our analysis on that. While this is not what I'm hoping to end with, this will be a good baseline metric to compare these methods to. 
+%The next closest possiblility to consider a distortion of the original image that corresponds to surface plot. While this is just another method of flattening the image we can consider the terrain as mapping the contours of this new image. This would require additional computation in reversing this process. 
 
-The next closest possiblility to consider a distortion of the original image that corresponds to surface plot. While this is just another method of flattening the image we can consider the terrain as mapping the contours of this new image. This would require additional computation in reversing this process. 
+%Another method is to consider the height map as another dimension in the colour information; ultimately the colour information is used as a matrix of numbers by the computer so by accessing the information this way we can use kernel's the same way. This also allows for us to include information like the gradient at specific locations.
 
-Another method is to consider the height map as another dimension in the colour information; ultimately the colour information is used as a matrix of numbers by the computer so by accessing the information this way we can use kernel's the same way. This also allows for us to include information like the gradient at specific locations.
-
-Essentially, there are 3 parts to this analysis. Firstly we are comparing methods of 3D encoding: this is data specific as the provided data set includes this information. Next we are comparing method's of feature selection. And finally we are comparing segmentation techniques: while this is ultimately the desire for this analysis, my purpose is to compare the range of factor's that lead to a certain performance.
+%Essentially, there are 3 parts to this analysis. Firstly we are comparing methods of 3D encoding: this is data specific as the provided data set includes this information. Next we are comparing method's of feature selection. And finally we are comparing segmentation techniques: while this is ultimately the desire for this analysis, my purpose is to compare the range of factor's that lead to a certain performance.
 \pagebreak
 
 \section*{Timeline}
