@@ -1,0 +1,29 @@
+# Literature Review Skeleton
+
+- Texture Analysis
+    - Problems
+    - Relation to project Problems
+    - Goals
+        - Shape
+        - Synthesis
+        - Classification
+        - Segmentation
+- Segmentation
+    - Problems
+    - Relation to project Problems
+        - Details on aims and approach (e.g. data focussed project)
+    - Methods
+        - Threshold
+        - Region
+        - Model based
+        - Edge Detection ++
+        - Feature Clustering ++
+        - Neural Networks ++
+- Datasets
+    - Types of data used
+    - Benchmarks
+    - Use cases
+    - Associated Problems
+- Colormaps
+    - Problems with different spaces
+    - Benefits of other spaces
