@@ -1,0 +1,153 @@
+Intro 
+
+With many methods being developed for the purposes of segmentation the field is becoming dense with options. There is a large number of fields including medical, computer vision as well as autonomous vehicles which rely on segmentation systems to be fast a robust. In the medical field it allows researchers or technicians to receive more data from highly specialised imagery, while autonomous vehicles can accurately find road boundaries and vehicles. 
+
+  
+
+This project will focus on data specific applications of segmentation for the mine pit data we're working on to accurately delineate detrital units from bedded units but will also look into public datasets that can be used that can be used as a benchmark for these techniques. 
+
+  
+
+Many of the techniques focus on feature extraction from imagery and subsequent clustering of the features. This has the advantage that our feature space is only limited by our clustering algorithms, however can also become very large very quickly. The other major area in computer vision involves the use of Convolutional Neural Networks. These have the advantage that they can build deep convolutions which may suit our purposes well, but also are black box algorithms and may not be helpful from the perspective of insight. There are many other generilsed models which get used in this field we will mention. 
+
+  
+
+Finally, we can talk about metrics. How well the models perform with respect to our dataset will be crucial for this data based project. 
+
+ 
+
+Gabor 
+
+Feature clustering is such an important area to segmentation from both a historical and performance perspective. The idea generally being that by using certain metrics, convolutions or statistics, we can extract information about the regions or pixels of an image, then based on this vector space, we can use conventional clustering techniques to split the pixels into different classes or regions. 
+
+  
+
+Gabor filters are filters used in texture analysis, which in the 2D domain is compromised of a modulated Gaussian kernel [Original Paper? Theory of Communication]. They are said to be similar to the human vision [J. Jones, L. Palmer, An evaluation of the two-dimensional Gabor filter] and are particularly useful for texture and edge representation [texture classification using gabor filters]. 
+
+**Insert gabor equation** 
+
+  
+
+Xu et al [Automatic 3D face recognition] used gabor filters to not only extract features from grey-level images, but also from depth images which achieved good characterization of faces for the recognition process. The system benefitted from the inclusion of both intensity and depth features, compared to both individually. 
+
+  
+
+Similarly, the use of log-Gabor filters have also been discussed. Nava et al [A comparison study of Gabor] suggest that log- Gabor filters out perform traditional gabor filters. 
+
+ 
+
+AutoEncoder 
+
+Neural Networks (convolutional or otherwise) are such a large part of computer vision for a number of reasons. In this case we are interested in the use of auto-encoders as a form of feature extraction. Because the process of training auto-encoders includes a lower dimensional form of the data based on subsequent convolutions, using the features generated may be useful. 
+
+  
+
+Yang et al [Multiscale Feature-Clustering-Based Fully Convolutional] propose an auto-encoder based method for unsupervised defect detection. This method uses an auto-encoder for feature extraction which it clusters over to find surface defects. This method has the benefit that it is unsupervised however achieves great performance in finding surface defects. 
+
+  
+
+Raja and rani [Brain tumor classification] use a similar approach for tumor classification from MRI images. Using various other feature extraction methods, as well as features extracted from training an auto-encoder, the pair were able to achieve the highest accuracy from their method when compared to other existing systems. By incorporating the systyem with bayesian fuzzy clustering, they were able to identify the positive regions in the MR images. 
+
+ 
+
+Clustering 
+
+With plenty of features extracted form the images, we need some way to select regions based on feature properties. A common method once features are extracted is to cluster these features. Provided we can effectively extract texture features from the images, clustering should provide a good framework for differentiating regions on texture. 
+
+  
+
+Kmeans 
+
+One of the most popular clustering algorithms based on simplicity and fast computation. The kmeans algorithm can be summurised simply: 
+
+  
+
+1. Take k points (call these the means) for each cluster. 
+
+2. Assign all observations to a cluster based on euclidean distance. 
+
+3. Calcualte the mean value for each given cluster and set this as the mean for that cluster. 
+
+4. Repeat steps 2-3 until observations do not change cluster. 
+
+  
+
+The method has been shown to perform well for segmentation purposes based on feature extracted images. Lin et all [Image Segmentation Using the K-means] shows that given good features, decent segmentation can be achieved. 
+
+ 
+
+FCM 
+
+Similar to kmeans is fuzzy c-means. As opposed to hard clustering, this algorithm adopts soft clustering, meaning it considers the "probability" of a particular point being within a cluster. The algorithm is as follows: 
+
+  
+
+1. Choose a number of clusters 
+
+2. Assign coefficients for observations to clusters randomly. 
+
+3. Compute the centroid for each cluster (i.e. the weighted mean for each point in the cluster) 
+
+4. Compute the coefficients for each cluster and observation. 
+
+5. Repeat 3-4 until the change in coefficients is less than some epsilon. 
+
+  
+
+The main difference to kmeans being that we don't assign any specific observation to a cluster, and consider the "probability" of the point belonging to each cluster. This method allows for smoother transitions between clusters, and that centroids are weighted more heavily to points that are closer to it. 
+
+  
+
+Yang et al [Segmentation techniques for tissue differentiation in MRI] were able to segment normal and abnormal tissue in MR images by the use of fuzzy c-means clustering on intensity. Harikirian et al [Multiple Feature Fuzzy c-means] achieved better results with the addition of other features for segmentation. 
+
+  
+
+Finally Chuang et al [Fuzzy c-means clustering with spatial] considered a fuzzy c-means algorithm that also considers spatial information. It is advantageous over normal FCM as it yield smroe homogenous regions and is also much less sensitive to noise. 
+
+ 
+
+DBSCAN 
+
+The last clustering algorithm we'll look at is DBSCAN. This algorithm takes a different appraoch to the other 2 as it considers the density of points within regions and will sometimes not assign observations to a cluster. The algorithm is as follows. 
+
+  
+
+1. Find all points within epsilon size neighbourhood of every observation. 
+
+2. Identify which points are core points by whether they have at least minPts neighbours. 
+
+3. Find which core points are connected to other core points and put them into their own cluster. 
+
+4. Assign each non-core point to a cluster if the cluster is within epsilon of a core point, otherwise assign it to noise. 
+
+  
+
+The algorithm works well for arbitrarily shaped clusters and is robust to noise making it a well performing algorithm [Kurumalla, K-NEAREST NEIGHBOR BASED DBSCAN] however is very dependent on good hyperparameter selection. 
+
+ 
+
+Wang et al [An Improved DBSCAN Method] proposed a method for automatic epsilon estimation which achieved better segmentation accuracy than methods that used different values of epsilon. 
+
+ 
+
+Neural Networks 
+
+As mentioned earlier, neural networks have exceptional performance with most application. CNNs specifically have the benefit that working with images is done in the spatial domain and we can still get deep predictors. 
+
+  
+
+While many CNNs have been trained to work as classifiers, work is still being done for segmentation. Long et al [Fully Convolutional Networks for Semantic Segmentation] managed to adapt architectures from previous state-of-the-art classifier systems into a segmentation system with good performance. By discarding the final classifier layers, and using a 1x1 convolution, the classifier can now predict a score for each class over the image space, upsampling wherever necessary. 
+
+  
+
+{FlatteNet [Cai, Flattenet: A Simple and Versatile Framework]} 
+
+  
+
+A similar approach is done by J ́egou et al [The One Hundred Layers Tiramisu]. The architecture for this method consists of a dense downsampling path, reducing the convolutions in dimension, a bottleneck path to learn deep features followed by an upsampling path with the final layer being dense, and finally a 1x1 convolution softmax layer to provide class distribution. The distinction this makes with the previous system is that it uses a relatively deep fully connected upsampling path before segmentation. 
+
+  
+
+A different approach taken by Fujieda et al [Wavelet Convolutional Neural Networks] was to incorporate wavelets into the CNNs. While it follows a specific architecture, the idea is that it runs concurrently wavelet transforms alongside convolutional layers, with concatonation and shortcuts incorporated. 
+
+ 
