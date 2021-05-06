@@ -1,0 +1,8 @@
+Main - Feature - Extraction
+AutoEncoder
+
+Neural Networks (convolutional or otherwise) are such a large part of computer vision for a number of reasons. In this case we are interested in the use of auto-encoders as a form of feature extraction. Because the process of training auto-encoders includes a lower dimensional form of the data based on subsequent convolutions, using the features generated may be useful.
+
+Yang et al [Multiscale Feature-Clustering-Based Fully Convolutional] propose an auto-encoder based method for unsupervised defect detection. This method uses an auto-encoder for feature extraction which it clusters over to find surface defects. This method has the benefit that it is unsupervised however achieves great performance in finding surface defects.
+
+Raja and rani [Brain tumor classification] use a similar approach for tumor classification from MRI images. Using various other feature extraction methods, as well as features extracted from training an auto-encoder, the pair were able to achieve the highest accuracy from their method when compared to other existing systems. By incorporating the systyem with bayesian fuzzy clustering, they were able to identify the positive regions in the MR images.

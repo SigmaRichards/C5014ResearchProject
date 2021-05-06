@@ -1,0 +1,13 @@
+ Similar to kmeans is  fuzzy c-means. As opposed to hard clustering, this algorithm adopts soft clustering, meaning it considers the "probability" of a particular point being within a cluster. The algorithm is as follows:
+ 
+ 1. Choose a number of clusters
+ 2. Assign coefficients for observations to clusters randomly.
+ 3. Compute the centroid for each cluster (i.e. the weighted mean for each point in the cluster)
+ 4. Compute the coefficients for each cluster and observation.
+ 5. Repeat 3-4 until the change in coefficients is less than some epsilon.
+ 
+ The main difference to kmeans being that we don't assign any specific observation to a cluster, and consider the "probability" of the point belonging to each cluster. This method allows for smoother transitions between clusters, and that centroids are weighted more heavily to points that are closer to it.
+ 
+ Yang et al [Segmentation techniques for tissue differentiation in MRI] were able to segment normal and abnormal tissue in MR images by the use of fuzzy c-means clustering on intensity. Harikirian et al [Multiple Feature Fuzzy c-means] achieved better results with the addition of other features for segmentation.
+ 
+ Finally Chuang et al [Fuzzy c-means clustering with spatial] considered a fuzzy c-means algorithm that also considers spatial information. It is advantageous over normal FCM as it yield smroe homogenous regions and is also much less sensitive to noise.

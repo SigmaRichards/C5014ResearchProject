@@ -1,0 +1,7 @@
+ With many methods being developed for the purposes of segmentation the field is becoming dense with options. There is a large number of fields including medical, computer vision as well as autonomous vehicles which rely on segmentation systems to be fast a robust. In the medical field it allows researchers or technicians to receive more data from highly specialised imagery, while autonomous vehicles can accurately find road boundaries and vehicles.
+ 
+ This project will focus on data specific applications of segmentation for the mine pit data we're working on to accurately delineate detrital units from bedded units but will also look into public datasets that can be used that can be used as a benchmark for these techniques.
+ 
+ Many of the techniques focus on feature extraction from imagery and subsequent clustering of the features. This has the advantage that our feature space is only limited by our clustering algorithms, however can also become very large very quickly. The other major area in computer vision involves the use of Convolutional Neural Networks. These have the advantage that they can build deep convolutions which may suit our purposes well, but also are black box algorithms and may not be helpful from the perspective of insight. There are many other generilsed models which get used in this field we will mention.
+ 
+ Finally, we can talk about metrics. How well the models perform with respect to our dataset will be crucial for this data based project.

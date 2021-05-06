@@ -1,0 +1,9 @@
+ As mentioned earlier, neural networks have exceptional performance with most application. CNNs specifically have the benefit that working with images is done in the spatial domain and we can still get deep predictors.
+ 
+ While many CNNs have been trained to work as classifiers, work is still being done for segmentation. Long et al [Fully Convolutional Networks for Semantic Segmentation] managed to adapt architectures from previous state-of-the-art classifier systems into a segmentation system with good performance. By discarding the final classifier layers, and using a 1x1 convolution, the classifier can now predict a score for each class over the image space, upsampling wherever necessary.
+ 
+ {FlatteNet [Cai, Flattenet: A Simple and Versatile Framework]}
+ 
+ A similar approach is done by J ́egou et al [The One Hundred Layers Tiramisu]. The architecture for this method consists of a dense downsampling path, reducing the convolutions in dimension, a bottleneck path to learn deep features followed by an upsampling path with the final layer being dense, and finally a 1x1 convolution softmax layer to provide class distribution. The distinction this makes with the previous system is that it uses a relatively deep fully connected upsampling path before segmentation.
+ 
+ A different approach taken by Fujieda et al [Wavelet Convolutional Neural Networks] was to incorporate wavelets into the CNNs. While it follows a specific architecture, the idea is that it runs concurrently wavelet transforms alongside convolutional layers, with concatonation and shortcuts incorporated. 

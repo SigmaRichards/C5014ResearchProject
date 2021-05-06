@@ -1,0 +1,45 @@
+\documentclass[a4]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{setspace}
+
+\title{Literature Review Draft OLD}
+\author{Daniel Hess - 21971897}
+\date{}
+
+\begin{document}
+\maketitle
+%\setstretch{3}
+
+\subsection*{Texture Analysis}
+Because we're concerned with computer vision applications, we need to distinguish that we are talking about \textit{visual} texture and not \textit{tactile} texture. There are a few definitions but they all come to the same kind of understanding: the texture of an image (or region/section of an image) refers to the shape, colour and general uniformity (or lack thereof) of a particular region. The purpose then of texture analysis is characterising the features of these textures so that we can tackle computer vision problems.
+
+A few of the problems we can look into solving with this field includes object recognition. In this case we're looking at characterising texture so we can find objects within an image. Sometimes the concern is the presence/absence of the object we're interested in and other times it's the position (or both). We can also look at pattern recognition, where we consider mroe generalised characterisation of texture and looking for patterns or regularities within the data. And finally there is a huge application to medical imaging, where we are able to characterise aspects of types of imaging that generally require specialist understanding. This fits the project description as we will be distinguishing non-uniform regions of aerial imagery based on texture analysis techniques.
+
+The goals of texture analysis can be classified into distinct categories of problems. The first is shape extraction, where the objective is looking to extract 3D images based on texture features from known textures. Next an there is exploration being done for texture synthesis, some methods imitating specific textures, random generation or modification of existing textures. The goal of texture classification is the same as other classification applied to texture analysis techniques: given an unknown sample of a texture, can we examine these features and predict what this texture is. This requires some sort of pre-defined set of texture classes. And finally there is segmentation.
+
+\subsection*{Segmentation}
+Texture segmentation is concerned with specifying regions of texture, or finding the boundary between different texture. These segments can be the boundaries between objects or might just be different sections on the same object. Segmentation is no t necessarily a classification task, while it may be beneficial to classify a segmented region, the important part is more often than not where each region is, or where the boundaries are. 
+
+This is the project goal as our primary focus is to find the boundaries of detrital units from mine pit data imaging. This project is data focussed, and while we will be exploring the performance of these techniques, it will be done primarily for this data set.
+
+There are a number of methods taken to perform data segmentation but we can quantify a large number of them into distinct groups.
+
+\textbf{Threshold} based technniques consider the values of a single pixel and decide whether or not it's in the positive or negative class. These techniques have the benefit of being fast and simple to compute but generally follow simple rules. However these techniques can be applied to colour images and can use multiple ones to segment multiple "classes".
+
+\textbf{Region} techniques consider the similarity of neighbouring pixels and slowly groups them into larger and larger regions based on similarity.
+
+\textbf{Model} based techniques use some model to represent the boundary or the region by some model. Generally, we can use curve deformation/evolution to find the curves that segment regions.
+
+\textbf{Edge Detection} is where we look for discontinuities between regions of homogeneity, generally looking for a sharp enough change in featuressuch that we can classify an edge. Some of these techniques focus on frequency and signal processing, seeing as high-frequency features generally correlate with edges.
+
+\textbf{Feature clustering} is one of the more prominent techniques used for segmentation. By incorporating feature extraction techniques, pixels are then clustered depending on the features using rtechniques such as k-means or fuzzy c-means.
+
+\textbf{Neural Networks} are applied to almost every area now, including segmentation. The benefit to representing convolutions in neural networks allows the problem to still exist in the spatial domain turning the problem into a computational area.
+
+\subsection*{Databases}
+With the advances in techniques there is in a need to have sufficiently good data for evaluation and training. Like in the medical field there are many types of highly specialised types of images from MRIs to mammograms. In the MRI datasets, researchers were able to classify patients for mild cognitive disturbances as well as segment regions of brain lesions, whereas the mammogram data was used to accurately classify cancerous breast tissue. 
+
+Dynamic texture however include the temporal domain. Generally these types of data stretch over time and what is important for these datasets is that different images or not necessarily distinct as regions may grow, shrink or deform.
+
+Finally there is a large number of datasets 
+\end{document}

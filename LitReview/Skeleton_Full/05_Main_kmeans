@@ -1,0 +1,11 @@
+With plenty of features extracted form the images, we need some way to select regions based on feature properties. A common method once features are extracted is to cluster these features. Provided we can effectively extract texture features from the images, clustering should provide a good framework for differentiating regions on texture.
+
+Kmeans
+One of the most popular clustering algorithms based on simplicity and fast computation. The kmeans algorithm can be summurised simply:
+
+1. Take k points (call these the means) for each cluster.
+2. Assign all observations to a cluster based on euclidean distance.
+3. Calcualte the mean value for each given cluster and set this as the mean for that cluster.
+4. Repeat steps 2-3 until observations do not change cluster.
+
+The method has been shown to perform well for segmenation purposes based on feature extracted images. Lin et all [Image Segmentation Using the K-means] shows that given good features, decent segmentation can be achieved.

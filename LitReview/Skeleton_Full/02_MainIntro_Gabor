@@ -1,0 +1,16 @@
++Intro
+
+Feature clustering is such an important area to segmentation from both a historical and performance perspective. The idea generally being that by using certain metrics, convolutions or statistics, we can extract information about the regions or pixels of an image, then based on this vector space, we can use conventional clustering techniques to split the pixels into different classes or regions.
+
++Gabor Filters
+
+Gabor filters are filters used in texture analysis, which in the 2D domain is compromised of a modulated Gaussian kernel [Original Paper? Theory of Communication]. They are said to be similar to the human vision [J. Jones, L. Palmer, An evaluation of the two-dimensional Gabor filter] and are particularly useful for texture and edge representation [texture classification using gabor filters].
+**Insert gabor equation**
+
+Xu et al [Automatic 3D face recognition] used gabor filters to not only extract features from grey-level images, but also from depth images which achieved good characterization of faces for the recognition process. The system benefitted from the inclusion of both intensity and depth features, compared to both individually.
+
+Similarly, the use of log-Gabor filters have also been discussed. Nava et al [A comparison study of Gabor] suggest that log- Gabor filters out perform traditional gabor filters.
+
+**insert gabor equation**
+
+{Phase divergence?}

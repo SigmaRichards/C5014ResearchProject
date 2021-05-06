@@ -1,0 +1,10 @@
+The last clustering algorithm we'll look at is DBSCAN. This algorithm takes a different appraoch to the other 2 as it considers the density of points within regions and will sometimes not assign observations to a cluster. The algorithm is as follows.
+
+1. Find all points within epsilon size neighbourhood of every observation.
+2. Identify which points are core points by whether they have at least minPts neighbours.
+3. Find which core points are connected to other core points and put them into their own cluster.
+4. Assign each non-core point to a cluster if the cluster is within epsilon of a core point, otherwise assign it to noise.
+
+The algorithm works well for arbitrarily shaped clusters and is robust to noise making it a well performing algorithm [Kurumalla, K-NEAREST NEIGHBOR BASED DBSCAN] however is very dependent on good hyperparameter selection.
+
+Wang et al [An Improved DBSCAN Method] proposed a method for automatic epsilon estimation which achieved better segmentation accuracy than methods that used different values of epsilon.

@@ -1,0 +1,35 @@
+Introduction
+
+Many methods used for segmentation
+Many areas to focus on with different goals
+Project will focus on data specific approach
+Will look at public data for reproducibility
+Many techniques focus on feature extraction then clustering
+Many other techniques use CNNs
+Will also look at other more generalised models
+Many metrics give serve different purposes
+
+Main
+    Feature Clustering
+        Extractions
+
+Gabor Filters
+Edge Detectors
+AutoEncoders
+
+        Clustering
+
+k-means
+fuzzy c-means
+dbscan
+
+    Other Techniques
+
+CNNs
+ACO
+
+    Metrics
+
+    Other Datasets
+
+Conclusion
