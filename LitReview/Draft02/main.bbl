@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{chuang2006fuzzy}
+{\sc Chuang, K.-S., Tzeng, H.-L., Chen, S., Wu, J., and Chen, T.-J.}
+\newblock Fuzzy c-means clustering with spatial information for image
+  segmentation.
+\newblock {\em computerized medical imaging and graphics 30}, 1 (2006), 9--15.
+
+\bibitem{fujieda2018wavelet}
+{\sc Fujieda, S., Takayama, K., and Hachisuka, T.}
+\newblock Wavelet convolutional neural networks.
+\newblock {\em arXiv preprint arXiv:1805.08620\/} (2018).
+
+\bibitem{garcia2018segmentation}
+{\sc Garcia-Lamont, F., Cervantes, J., L{\'o}pez, A., and Rodriguez, L.}
+\newblock Segmentation of images by color features: A survey.
+\newblock {\em Neurocomputing 292\/} (2018), 1--27.
+
+\bibitem{ha2017mfnet}
+{\sc Ha, Q., Watanabe, K., Karasawa, T., Ushiku, Y., and Harada, T.}
+\newblock Mfnet: Towards real-time semantic segmentation for autonomous
+  vehicles with multi-spectral scenes.
+\newblock In {\em 2017 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)\/} (2017), IEEE, pp.~5108--5115.
+
+\bibitem{halley2012perceptually}
+{\sc Halley, F., et~al.}
+\newblock {\em Perceptually relevant browsing environments for large texture
+  databases}.
+\newblock PhD thesis, Citeseer, 2012.
+
+\bibitem{harikiran2015multiple}
+{\sc Harikiran, J., Lakshmi, P., and Kumar, R.~K.}
+\newblock Multiple feature fuzzy c-means clustering algorithm for segmentation
+  of microarray images.
+\newblock {\em International Journal of Electrical and Computer Engineering 5},
+  5 (2015).
+
+\bibitem{hossain2013texture}
+{\sc Hossain, S., and Serikawa, S.}
+\newblock Texture databases--a comprehensive survey.
+\newblock {\em Pattern Recognition Letters 34}, 15 (2013), 2007--2022.
+
+\bibitem{jegou2017one}
+{\sc J{\'e}gou, S., Drozdzal, M., Vazquez, D., Romero, A., and Bengio, Y.}
+\newblock The one hundred layers tiramisu: Fully convolutional densenets for
+  semantic segmentation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition workshops\/} (2017), pp.~11--19.
+
+\bibitem{jones1987evaluation}
+{\sc Jones, J.~P., and Palmer, L.~A.}
+\newblock An evaluation of the two-dimensional gabor filter model of simple
+  receptive fields in cat striate cortex.
+\newblock {\em Journal of neurophysiology 58}, 6 (1987), 1233--1258.
+
+\bibitem{kurumalla2016k}
+{\sc Kurumalla, S., and Rao, P.~S.}
+\newblock K-nearest neighbor based dbscan clustering algorithm for image
+  segmentation.
+\newblock {\em Journal of Theoretical and Applied Information Technology 92}, 2
+  (2016), 395.
+
+\bibitem{lin2010image}
+{\sc Lin, W.-T., Lin, C.-H., Wu, T.-H., and Chan, Y.-K.}
+\newblock Image segmentation using the k-means algorithm for texture features.
+\newblock {\em World Academy of Science, Engineering and Technology 65\/}
+  (2010), 612--615.
+
+\bibitem{long2015fully}
+{\sc Long, J., Shelhamer, E., and Darrell, T.}
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition\/} (2015), pp.~3431--3440.
+
+\bibitem{nava2011comparison}
+{\sc Nava, R., Escalante-Ram{\'\i}rez, B., and Crist{\'o}bal, G.}
+\newblock A comparison study of gabor and log-gabor wavelets for texture
+  segmentation.
+\newblock In {\em 2011 7th International Symposium on Image and Signal
+  Processing and Analysis (ISPA)\/} (2011), IEEE, pp.~189--194.
+
+\bibitem{siva2020brain}
+{\sc Siva~Raja, P., and Rani, A.~V.}
+\newblock Brain tumor classification using a hybrid deep autoencoder with
+  bayesian fuzzy clustering-based segmentation approach.
+\newblock {\em Biocybernetics and Biomedical Engineering 40}, 1 (2020).
+
+\bibitem{wang2019improved}
+{\sc Wang, C., Ji, M., Wang, J., Wen, W., Li, T., and Sun, Y.}
+\newblock An improved dbscan method for lidar data segmentation with automatic
+  eps estimation.
+\newblock {\em Sensors 19}, 1 (2019), 172.
+
+\bibitem{xu2009automatic}
+{\sc Xu, C., Li, S., Tan, T., and Quan, L.}
+\newblock Automatic 3d face recognition from depth and intensity gabor
+  features.
+\newblock {\em Pattern recognition 42}, 9 (2009), 1895--1905.
+
+\bibitem{yang2019multiscale}
+{\sc Yang, H., Chen, Y., Song, K., and Yin, Z.}
+\newblock Multiscale feature-clustering-based fully convolutional autoencoder
+  for fast accurate visual inspection of texture surface defects.
+\newblock {\em IEEE Transactions on Automation Science and Engineering 16}, 3
+  (2019), 1450--1467.
+
+\bibitem{yang2002segmentation}
+{\sc Yang, M.-S., Hu, Y.-J., Lin, K. C.-R., and Lin, C. C.-L.}
+\newblock Segmentation techniques for tissue differentiation in mri of
+  ophthalmology using fuzzy clustering algorithms.
+\newblock {\em Magnetic Resonance Imaging 20}, 2 (2002), 173--179.
+
+\end{thebibliography}
